@@ -1,0 +1,43 @@
+<?php
+/**
+ * Foxycom - eCommerce solutions
+*
+* Adroll
+*
+* @author    Foxycom <support@foxycom.com>
+* @package   Foxycom_Adroll
+* @copyright Copyright (c) 2017 Foxycom (https://foxycom.com)
+* @license   https://foxycom.com/license/osl-30
+*
+* For the full copyright and license information, please view the LICENSE.txt
+* file that was distributed with this source code.
+*/
+?>
+<?php /** @var $block Foxycom\Adroll\Block\Adroll */ ?>
+<?php $advId = $block->getConfig(\Foxycom\Adroll\Helper\Data::XML_PATH_ADV_ID) ?>
+<?php $pixId = $block->getConfig(\Foxycom\Adroll\Helper\Data::XML_PATH_PIX_ID) ?>
+
+<!-- BEGIN ADROLL CODE -->
+<script type="text/javascript">
+//<![CDATA[
+    adroll_adv_id = "<?php echo $advId; ?>";
+    adroll_pix_id = "<?php echo $pixId; ?>";
+    <?php /* @escapeNotVerified */ echo $block->getSuccessPageCode(); ?>
+    (function () {
+        var _onload = function(){
+            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+            var scr = document.createElement("script");
+            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+            scr.setAttribute('async', 'true');
+            scr.type = "text/javascript";
+            scr.src = host + "/j/roundtrip.js";
+            ((document.getElementsByTagName('head') || [null])[0] ||
+                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        };
+        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+        else {window.attachEvent('onload', _onload)}
+    }());
+//]]>
+</script>
+<!-- END OF ADROLL CODE -->

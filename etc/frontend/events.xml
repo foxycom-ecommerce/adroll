@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Foxycom - eCommerce solutions
+ *
+ * Adroll
+ *
+ * @author    Foxycom <support@foxycom.com>
+ * @package   Foxycom_Adroll
+ * @copyright Copyright (c) 2017 Foxycom (https://foxycom.com)
+ * @license   https://foxycom.com/license/osl-30
+ *
+ * For the full copyright and license information, please view the LICENSE.txt
+ * file that was distributed with this source code.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_onepage_controller_success_action">
+        <observer name="adroll_order_success" instance="Foxycom\Adroll\Observer\SuccessPageViewObserver" />
+    </event>
+    <event name="multishipping_checkout_controller_success_action">
+        <observer name="adroll_order_success" instance="Foxycom\Adroll\Observer\SuccessPageViewObserver" />
+    </event>
+</config>

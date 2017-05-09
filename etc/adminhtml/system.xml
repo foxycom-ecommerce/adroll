@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Foxycom - eCommerce solutions
+ *
+ * Adroll
+ *
+ * @author    Foxycom <support@foxycom.com>
+ * @package   Foxycom_Adroll
+ * @copyright Copyright (c) 2017 Foxycom (https://foxycom.com)
+ * @license   https://foxycom.com/license/osl-30
+ *
+ * For the full copyright and license information, please view the LICENSE.txt
+ * file that was distributed with this source code.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="foxycom" translate="label" sortOrder="300">
+            <label>Foxycom Extensions</label>
+        </tab>
+        <section id="adroll" translate="label" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>AdRoll</label>
+            <tab>foxycom</tab>
+            <resource>Foxycom_Adroll::config_foxycom_general</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <label>Enable</label>
+                    <config_path>foxycom/adroll/enabled</config_path>
+                </field>
+                <field id="adroll_adv" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>AdRoll Adv Id</label>
+                    <depends>
+                        <field id="*/*/enabled">1</field>
+                    </depends>
+                    <config_path>foxycom/adroll/adroll_adv</config_path>
+                </field>
+                <field id="adroll_pix" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>AdRoll Pix Id</label>
+                    <depends>
+                        <field id="*/*/enabled">1</field>
+                    </depends>
+                    <config_path>foxycom/adroll/adroll_pix</config_path>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

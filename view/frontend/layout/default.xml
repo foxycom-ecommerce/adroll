@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Foxycom - eCommerce solutions
+ *
+ * Adroll
+ *
+ * @author    Foxycom <support@foxycom.com>
+ * @package   Foxycom_Adroll
+ * @copyright Copyright (c) 2017 Foxycom (https://foxycom.com)
+ * @license   https://foxycom.com/license/osl-30
+ *
+ * For the full copyright and license information, please view the LICENSE.txt
+ * file that was distributed with this source code.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="after.body.start">
+            <block class="Foxycom\Adroll\Block\Adroll" name="adroll_tracking" as="adroll_tracking" template="adroll.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
