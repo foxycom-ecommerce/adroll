@@ -27,5 +27,5 @@
         "magento/framework": "100.1.*",
         "magento/module-cookie": "100.1.*",
         "magento/module-catalog": "100.1.*"
-    },
+    }
 }
