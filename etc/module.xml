@@ -16,7 +16,7 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Foxycom_Adroll" setup_version="1.0.3">
+    <module name="Foxycom_Adroll" setup_version="1.0.4">
         <sequence>
             <module name="Magento_Checkout"/>
         </sequence>
