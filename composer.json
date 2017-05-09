@@ -1,7 +1,7 @@
 {
     "name": "foxycom/adroll",
     "description": "Adroll Tracking by Foxycom",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "license": "OSL-3.0",
     "type": "magento2-module",
     "authors": [
